@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  - results = [{noofWings: 3, Colour: 'Red', Price: 20}, {noofWings: 4, Colour: 'White', Price: 15},{noofWings: 3, Colour: 'Black', Price: 10} ]
+  div(class="container-fluid")
+      each item in results
+        div(class="row")
+          div(class="col-sm-2")  #{item.noofWings}
+          div(class="col-sm-2")  #{item.Price}
+          div(class="col-sm-2")  #{item.Colour}    
